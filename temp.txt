@@ -1,0 +1,41 @@
+class Character {
+
+  constructor() {
+    this.pos = new Vec(0, 0);
+    this.width = 40;
+    this.height = 40;
+    this.speed = Vec(0, 0);
+  }
+
+}
+
+
+class Tile {
+
+  constructor() {
+    this.width = 40;
+    this.height = 40;
+    this.pos = { x: 40, y: 40 };
+    this.type = 'SOLID';
+  }
+
+}
+
+
+class World {
+  constructor() {}
+
+  preTick() {}
+
+  tick() {}
+
+  postTick() {}
+
+  start() {
+    setInterval(() => {
+      this.preTick();
+      this.tick();
+      this.postTick();
+    }, Math.round(1000/60));
+  }
+}
