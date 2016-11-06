@@ -4,13 +4,13 @@ import config from 'config';
 
 export default class Tile {
 	constructor(props) {
-		this.width = config.GRID_SIZE;
-		this.height = config.GRID_SIZE;
+		this.width = config.MAIN_SIZE;
+		this.height = config.MAIN_SIZE;
 
 		this.defaults();
 
 		if (props.pos) {
-			this.pos = props.pos.multiply(config.GRID_SIZE);
+			this.pos = props.pos.multiply(config.MAIN_SIZE);
 			this._multiplied = true;
 		}
 
@@ -27,7 +27,7 @@ export default class Tile {
 
 	render(ctx) {
 		if (config.DEBUG_TILES) {
-			ctx.rect(this.pos.x, this.pos.y, config.GRID_SIZE, config.GRID_SIZE);
+			ctx.rect(this.pos.x, this.pos.y, config.MAIN_SIZE, config.MAIN_SIZE);
 			ctx.stroke();
 		}
 	}

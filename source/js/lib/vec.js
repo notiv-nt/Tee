@@ -23,4 +23,24 @@ export default class Vec {
 
 		return this;
 	}
+
+	// TODO: add({ x: , y: })
+	add(x, y) {
+		this.x += x;
+		this.y += y;
+
+		return this;
+	}
+
+	copy() {
+		return new Vec(this.x, this.y);
+	}
+
+	// TODO: set({ x: , y: })
+	set(x, y) {
+		this.x = x;
+		this.y = y;
+
+		return this;
+	}
 }
