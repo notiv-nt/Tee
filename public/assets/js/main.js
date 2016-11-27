@@ -56,7 +56,7 @@
 
 	var _map2 = _interopRequireDefault(_map);
 
-	var _TileSolid = __webpack_require__(9);
+	var _TileSolid = __webpack_require__(10);
 
 	var _TileSolid2 = _interopRequireDefault(_TileSolid);
 
@@ -77,13 +77,24 @@
 	var world = new _world2.default();
 
 	var map = new _map2.default({
-		tiles: [new _TileSolid2.default({ pos: new _vec2.default(3, 8) }), new _TileSolid2.default({ pos: new _vec2.default(4, 8) }), new _TileSolid2.default({ pos: new _vec2.default(5, 8) }), new _TileSolid2.default({ pos: new _vec2.default(6, 8) }), new _TileSolid2.default({ pos: new _vec2.default(7, 8) }), new _TileSolid2.default({ pos: new _vec2.default(8, 8) }), new _TileSolid2.default({ pos: new _vec2.default(9, 8) }), new _TileSolid2.default({ pos: new _vec2.default(10, 8) }), new _TileSolid2.default({ pos: new _vec2.default(11, 8) }), new _TileSolid2.default({ pos: new _vec2.default(12, 8) }), new _TileSolid2.default({ pos: new _vec2.default(14, 8) }), new _TileSolid2.default({ pos: new _vec2.default(15, 8) }), new _TileSolid2.default({ pos: new _vec2.default(16, 8) }), new _TileSolid2.default({ pos: new _vec2.default(17, 8) }), new _TileSolid2.default({ pos: new _vec2.default(18, 8) }), new _TileSolid2.default({ pos: new _vec2.default(19, 8) }), new _TileSolid2.default({ pos: new _vec2.default(20, 8) })]
+		tiles: [
+		// top bar
+		new _TileSolid2.default({ pos: new _vec2.default(2, 2) }), new _TileSolid2.default({ pos: new _vec2.default(3, 2) }), new _TileSolid2.default({ pos: new _vec2.default(4, 2) }), new _TileSolid2.default({ pos: new _vec2.default(5, 2) }), new _TileSolid2.default({ pos: new _vec2.default(6, 2) }), new _TileSolid2.default({ pos: new _vec2.default(7, 2) }), new _TileSolid2.default({ pos: new _vec2.default(8, 2) }), new _TileSolid2.default({ pos: new _vec2.default(9, 2) }), new _TileSolid2.default({ pos: new _vec2.default(10, 2) }), new _TileSolid2.default({ pos: new _vec2.default(11, 2) }), new _TileSolid2.default({ pos: new _vec2.default(12, 2) }), new _TileSolid2.default({ pos: new _vec2.default(13, 2) }), new _TileSolid2.default({ pos: new _vec2.default(14, 2) }), new _TileSolid2.default({ pos: new _vec2.default(15, 2) }), new _TileSolid2.default({ pos: new _vec2.default(16, 2) }), new _TileSolid2.default({ pos: new _vec2.default(17, 2) }), new _TileSolid2.default({ pos: new _vec2.default(18, 2) }), new _TileSolid2.default({ pos: new _vec2.default(19, 2) }), new _TileSolid2.default({ pos: new _vec2.default(20, 2) }), new _TileSolid2.default({ pos: new _vec2.default(21, 2) }), new _TileSolid2.default({ pos: new _vec2.default(22, 2) }), new _TileSolid2.default({ pos: new _vec2.default(23, 2) }), new _TileSolid2.default({ pos: new _vec2.default(24, 2) }), new _TileSolid2.default({ pos: new _vec2.default(25, 2) }),
+
+		// left
+		new _TileSolid2.default({ pos: new _vec2.default(2, 3) }), new _TileSolid2.default({ pos: new _vec2.default(2, 4) }), new _TileSolid2.default({ pos: new _vec2.default(2, 5) }), new _TileSolid2.default({ pos: new _vec2.default(2, 6) }), new _TileSolid2.default({ pos: new _vec2.default(2, 7) }), new _TileSolid2.default({ pos: new _vec2.default(2, 8) }), new _TileSolid2.default({ pos: new _vec2.default(2, 9) }), new _TileSolid2.default({ pos: new _vec2.default(2, 10) }), new _TileSolid2.default({ pos: new _vec2.default(2, 11) }),
+
+		// bottom
+		new _TileSolid2.default({ pos: new _vec2.default(3, 11) }), new _TileSolid2.default({ pos: new _vec2.default(4, 11) }), new _TileSolid2.default({ pos: new _vec2.default(5, 11) }), new _TileSolid2.default({ pos: new _vec2.default(6, 11) }), new _TileSolid2.default({ pos: new _vec2.default(7, 11) }), new _TileSolid2.default({ pos: new _vec2.default(8, 11) }), new _TileSolid2.default({ pos: new _vec2.default(9, 11) }), new _TileSolid2.default({ pos: new _vec2.default(10, 11) }), new _TileSolid2.default({ pos: new _vec2.default(11, 11) }), new _TileSolid2.default({ pos: new _vec2.default(12, 11) }), new _TileSolid2.default({ pos: new _vec2.default(13, 11) }), new _TileSolid2.default({ pos: new _vec2.default(14, 11) }), new _TileSolid2.default({ pos: new _vec2.default(15, 11) }), new _TileSolid2.default({ pos: new _vec2.default(16, 11) }), new _TileSolid2.default({ pos: new _vec2.default(17, 11) }), new _TileSolid2.default({ pos: new _vec2.default(18, 11) }), new _TileSolid2.default({ pos: new _vec2.default(19, 11) }), new _TileSolid2.default({ pos: new _vec2.default(20, 11) }), new _TileSolid2.default({ pos: new _vec2.default(21, 11) }), new _TileSolid2.default({ pos: new _vec2.default(22, 11) }), new _TileSolid2.default({ pos: new _vec2.default(23, 11) }), new _TileSolid2.default({ pos: new _vec2.default(24, 11) }), new _TileSolid2.default({ pos: new _vec2.default(25, 11) }),
+
+		// right
+		new _TileSolid2.default({ pos: new _vec2.default(25, 10) }), new _TileSolid2.default({ pos: new _vec2.default(25, 9) }), new _TileSolid2.default({ pos: new _vec2.default(25, 8) }), new _TileSolid2.default({ pos: new _vec2.default(25, 7) }), new _TileSolid2.default({ pos: new _vec2.default(25, 6) }), new _TileSolid2.default({ pos: new _vec2.default(25, 5) }), new _TileSolid2.default({ pos: new _vec2.default(25, 4) }), new _TileSolid2.default({ pos: new _vec2.default(25, 3) })]
 	});
 
 	world.setMap(map);
 
 	var player = new _player2.default(world);
-	player.pos.set(280, 160);
+	player.pos.set(520, 281);
 
 	world.addPlayer(player);
 	world.setControlPlayer(player);
@@ -822,15 +833,21 @@
 
 /***/ },
 /* 8 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _config = __webpack_require__(9);
+
+	var _config2 = _interopRequireDefault(_config);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -843,14 +860,48 @@
 			this.tiles = data.tiles;
 		}
 
+		// getTileAt(431, 117)
+
+
 		_createClass(WorldMap, [{
-			key: "getTileAt",
-			value: function getTileAt(x, y) {
-				for (var tile in this.tiles) {
-					if (tile.x === x && tile.y === y) {
-						return tile;
+			key: 'getTile',
+			value: function getTile(x, y) {
+				var _iteratorNormalCompletion = true;
+				var _didIteratorError = false;
+				var _iteratorError = undefined;
+
+				try {
+					for (var _iterator = this.tiles[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+						var tile = _step.value;
+
+						var tilePos = tile.pos;
+
+						if (tilePos.x < x && tilePos.x + tile.width > x && tilePos.y < y && tilePos.y + tile.height > y) {
+							return tile;
+						}
+					}
+				} catch (err) {
+					_didIteratorError = true;
+					_iteratorError = err;
+				} finally {
+					try {
+						if (!_iteratorNormalCompletion && _iterator.return) {
+							_iterator.return();
+						}
+					} finally {
+						if (_didIteratorError) {
+							throw _iteratorError;
+						}
 					}
 				}
+			}
+
+			// getTileAtRelative(12, 14)
+
+		}, {
+			key: 'getTileRelative',
+			value: function getTileRelative(x, y) {
+				return this.getTileAt(_x * _config2.default.MAIN_SIZE, _y * _config2.default.MAIN_SIZE);
 			}
 		}]);
 
@@ -861,6 +912,27 @@
 
 /***/ },
 /* 9 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = {
+		MAIN_SIZE: 40,
+
+		DEBUG_MAP: true,
+		DEBUG_TILES: true,
+
+		GRAVITY: {
+			x: 0,
+			y: 10
+		}
+	};
+
+/***/ },
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -873,7 +945,7 @@
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _tile = __webpack_require__(10);
+	var _tile = __webpack_require__(11);
 
 	var _tile2 = _interopRequireDefault(_tile);
 
@@ -910,7 +982,7 @@
 	exports.default = TileSolid;
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -921,7 +993,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _config = __webpack_require__(11);
+	var _config = __webpack_require__(9);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -969,30 +1041,6 @@
 	exports.default = Tile;
 
 /***/ },
-/* 11 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	exports.default = {
-		MAIN_SIZE: 40,
-
-		DEBUG_MAP: true,
-		DEBUG_TILES: true,
-
-		GRAVITY: {
-			x: 0,
-			y: 10
-		},
-
-		// TODO: ?
-		COLLIDE_SEPARATE_WIDTH: 1
-	};
-
-/***/ },
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1004,7 +1052,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _config = __webpack_require__(11);
+	var _config = __webpack_require__(9);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -1041,7 +1089,7 @@
 
 				this.drawGrid();
 
-				this.temp();
+				// this.temp();
 
 				var map = this.world.map;
 				var players = this.world.players;
@@ -1193,7 +1241,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _config = __webpack_require__(11);
+	var _config = __webpack_require__(9);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -1211,8 +1259,8 @@
 
 			this.pos = new _vec2.default(0, 0);
 			this.nextPos = new _vec2.default(0, 0);
-			this.width = _config2.default.MAIN_SIZE - 1;
-			this.height = _config2.default.MAIN_SIZE - 1;
+			this.width = _config2.default.MAIN_SIZE;
+			this.height = _config2.default.MAIN_SIZE;
 			this.speed = new _vec2.default(0, 0);
 			this.world = world;
 
@@ -1226,252 +1274,108 @@
 				this.drawCollisions = [];
 				var input = this.world.input;
 
-				// this.nextPos = this.pos.copy();
-				this.nextPos = this.world.input.mousePos;
+				this.nextPos = this.pos.copy();
+				// this.nextPos = this.world.input.mousePos;
+
+				var tempVel = 1;
 
 				if (input.keys.LEFT) {
-					this.nextPos.x -= 5;
+					this.nextPos.x -= tempVel;
 				}
 
 				if (input.keys.RIGHT) {
-					this.nextPos.x += 5;
+					this.nextPos.x += tempVel;
 				}
 
 				if (input.keys.UP) {
-					this.nextPos.y -= 5;
+					this.nextPos.y -= tempVel;
 				}
 
 				if (input.keys.DOWN) {
-					this.nextPos.y += 5;
+					this.nextPos.y += tempVel;
 				}
 
-				this.checkCollide2();
+				this.move();
 
 				// 	.add(config.GRAVITY.x, config.GRAVITY.y);
 			}
 		}, {
 			key: 'tick',
 			value: function tick() {
-				// console.log(`From: ${this.pos.x} ${this.pos.y}, to: ${this.nextPos.x} ${this.nextPos.y}`);
-				// this.pos = this.nextPos;
+				this.pos = this.nextPos.copy();
 			}
 		}, {
-			key: 'checkCollide2',
-			value: function checkCollide2() {
+			key: 'move',
+			value: function move() {
 				var _from = this.pos;
-				var _to = this.nextPos;
+				var _to = this.nextPos.copy();
+				var prevPos = _from.copy();
 
 				// корень из суммы квадратов координат
 				var len = Math.round(Math.sqrt(Math.pow(Math.abs(_to.x - _from.x), 2) + Math.pow(Math.abs(_to.y - _from.y), 2)));
 
-				var checkedPos = [];
-
-				for (var i = 0; i < len; i += _config2.default.COLLIDE_SEPARATE_WIDTH) {
+				for (var i = 0; i < len; i += 0.5) {
 					var sinA = -(_from.x - _to.x) / Math.sqrt(Math.pow(_from.x - _to.x, 2) + Math.pow(_from.y - _to.y, 2));
 
 					var cosA = -(_from.y - _to.y) / Math.sqrt(Math.pow(_from.x - _to.x, 2) + Math.pow(_to.y - _from.y, 2));
 
-					// TODO: .round ?
-					var nextX = Math.round(_from.x + sinA * i);
-					var nextY = Math.round(_from.y + cosA * i);
+					var virtualPos = new _vec2.default(Math.floor(_from.x + sinA * i), Math.floor(_from.y + cosA * i));
 
-					var coordsStr = nextX + ':' + nextY;
+					if (prevPos.x === virtualPos.x && prevPos.y === virtualPos.y) {
+						continue;
+					}
 
-					if (!checkedPos[coordsStr]) {
+					// проверям сначало X
+					if (this.checkCollide({ x: virtualPos.x, y: prevPos.y })) {
+						// оставляем X, добавляем Y
+						this.pos = new _vec2.default(prevPos.x, prevPos.y);
+						this.nextPos = new _vec2.default(prevPos.x, this.nextPos.y);
 
-						// just something, 1 просто для минимального ресурса памяти
-						checkedPos[coordsStr] = 1;
-					} else {}
+						return this.move();
+					}
 
-					coords.push(nextX + ': ' + nextY);
-					// let drawingTileCoords = normalizeCorrdsToTile(_from.x + sinA * i, _from.y + cosA * i);
-					// let checkedStr = `${drawingTileCoords.x}:${drawingTileCoords.y}`;
+					// потом Y
+					else if (this.checkCollide({ x: prevPos.x, y: virtualPos.y })) {
+							// оставляем Y, добавляем X
+							this.pos = new _vec2.default(prevPos.x, prevPos.y);
+							this.nextPos = new _vec2.default(this.nextPos.x, prevPos.y);
 
-					// if (checkedTiles.indexOf(checkedStr) === -1) {
-					// 	checkedTiles.push(checkedStr);
-					// 	this.drawCollisions.push({ x: drawingTileCoords.x, y: drawingTileCoords.y });
-					// }
+							return this.move();
+						}
+
+					// идем дальше
+					prevPos = virtualPos;
 				}
 
-				document.querySelector('#debug').innerHTML = coords.join('<br>');
+				this.nextPos = _to;
 			}
 		}, {
 			key: 'checkCollide',
-			value: function checkCollide() {
-				var _to = this.nextPos;
+			value: function checkCollide(pos) {
+				var map = this.world.map;
 
-				var edgesToCheck = [];
-
-				// идем вправо
-				if (this.nextPos.x > this.pos.x) {
-
-					// и вверх
-					if (this.nextPos.y < this.pos.y) {
-						edgesToCheck.push(
-						// правый верхний
-						{
-							x: this.pos.x + this.width + 1,
-							y: this.pos.y - 1
-						},
-						// левый верхний
-						{
-							x: this.pos.x,
-							y: this.pos.y - 1
-						},
-						// правый нижний
-						{
-							x: this.pos.x + this.width + 1,
-							y: this.pos.y + this.height
-						});
-					}
-
-					// или вниз
-					else if (this.nextPos.y > this.pos.y) {
-							edgesToCheck.push(
-							// правый нижний
-							{
-								x: this.pos.x + this.width + 1,
-								y: this.pos.y + this.height + 1
-							},
-							// левый нижний
-							{
-								x: this.pos.x,
-								y: this.pos.y + this.height + 1
-							},
-							// правый верхний
-							{
-								x: this.pos.x + this.width + 1,
-								y: this.pos.y + this.height
-							});
-						}
-
-						// ровно вправо
-						else {
-								edgesToCheck.push(
-								// right top
-								{ x: this.pos.x + this.width + 1, y: this.pos.y },
-								// right bottom
-								{ x: this.pos.x + this.width + 1, y: this.pos.y + this.height });
-							}
-				}
-
-				// идем влево
-				else if (this.nextPos.x < this.pos.x) {
-
-						// и вверх
-						if (this.nextPos.y < this.pos.y) {
-							edgesToCheck.push(
-							// левый верхний
-							{
-								x: this.pos.x - 1,
-								y: this.pos.y - 1
-							},
-							// левый нижний
-							{
-								x: this.pos.x - 1,
-								y: this.pos.y
-							},
-							// правый верхний
-							{
-								x: this.pos.x + this.width,
-								y: this.pos.y - 1
-							});
-						}
-
-						// или вниз
-						else if (this.nextPos.y > this.pos.y) {
-								edgesToCheck.push(
-								// левый нижний
-								{
-									x: this.pos.x + this.width - 1,
-									y: this.pos.y + this.height + 1
-								},
-								// левый верхний
-								{
-									x: this.pos.x,
-									y: this.pos.y
-								},
-								// правый нижний
-								{
-									x: this.pos.x + this.width,
-									y: this.pos.y + this.height + 1
-								});
-							}
-
-							// ровно влево
-							else {
-									edgesToCheck.push(
-									// левый верхний
-									{ x: this.pos.x - 1, y: this.pos.y },
-									// левый нижний
-									{ x: this.pos.x - 1, y: this.pos.y + this.height });
-								}
-					}
-
-					// идем по вертикали ровно вверх\вниз
-					else if (this.nextPos.x === this.pos.x) {
-
-							// вверх
-							if (this.nextPos.y < this.pos.y) {
-								edgesToCheck.push(
-								// левый верхний
-								{
-									x: this.pos.x,
-									y: this.pos.y - 1
-								},
-								// правый верхний
-								{
-									x: this.pos.x + this.width,
-									y: this.pos.y - 1
-								});
-							}
-
-							// вниз
-							else if (this.nextPos.y > this.pos.y) {
-									edgesToCheck.push(
-									// левый нижний
-									{
-										x: this.pos.x,
-										y: this.pos.y + this.height + 1
-									},
-									// правый нижний
-									{
-										x: this.pos.x + this.width,
-										y: this.pos.y + this.height + 1
-									});
-								}
-						}
+				var tiles = [
+				// top left
+				map.getTile(pos.x, pos.y),
+				// top right
+				map.getTile(pos.x + this.width - 1, pos.y),
+				// bottom left
+				map.getTile(pos.x, pos.y + this.height - 1),
+				// bottom right
+				map.getTile(pos.x + this.width - 1, pos.y + this.height - 1)];
 
 				var _iteratorNormalCompletion = true;
 				var _didIteratorError = false;
 				var _iteratorError = undefined;
 
 				try {
-					for (var _iterator = edgesToCheck[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-						var edge = _step.value;
+					for (var _iterator = tiles[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+						var tile = _step.value;
 
-						var _from = edge;
-
-						// корень из суммы квадратов координат
-						var len = Math.round(Math.sqrt(Math.pow(Math.abs(_to.x - _from.x), 2) + Math.pow(Math.abs(_to.y - _from.y), 2)));
-
-						var checkedTiles = [];
-						for (var i = 0; i < len; i += _config2.default.COLLIDE_SEPARATE_WIDTH) {
-							var sinA = -(_from.x - _to.x) / Math.sqrt(Math.pow(_from.x - _to.x, 2) + Math.pow(_from.y - _to.y, 2));
-
-							var cosA = -(_from.y - _to.y) / Math.sqrt(Math.pow(_from.x - _to.x, 2) + Math.pow(_to.y - _from.y, 2));
-
-							var drawingTileCoords = normalizeCorrdsToTile(_from.x + sinA * i, _from.y + cosA * i);
-							var checkedStr = drawingTileCoords.x + ':' + drawingTileCoords.y;
-
-							if (checkedTiles.indexOf(checkedStr) === -1) {
-								checkedTiles.push(checkedStr);
-								this.drawCollisions.push({ x: drawingTileCoords.x, y: drawingTileCoords.y });
-							}
+						if (tile && tile.type === 'SOLID') {
+							return true;
 						}
 					}
-
-					// drawCollisionRectangle(posTo.x, posTo.y);
 				} catch (err) {
 					_didIteratorError = true;
 					_iteratorError = err;
@@ -1486,24 +1390,19 @@
 						}
 					}
 				}
-
-				function normalizeCorrdsToTile(x, y) {
-					return {
-						x: x - x % _config2.default.MAIN_SIZE,
-						y: y - y % _config2.default.MAIN_SIZE
-					};
-				}
 			}
 		}, {
 			key: 'render',
 			value: function render(ctx) {
-				var prev_strokeStyle = ctx.strokeStyle;
+				var prev_strokeStyle = ctx.fillStyle;
 
-				ctx.strokeStyle = 'rgba(0, 0, 0, .8)';
-				// ctx.rect(this.pos.x, this.pos.y, config.MAIN_SIZE, config.MAIN_SIZE);
-				// ctx.stroke();
+				ctx.beginPath();
+				ctx.fillStyle = '#09f';
+				ctx.rect(this.pos.x, this.pos.y, this.width, this.height);
+				ctx.fill();
+				ctx.closePath();
 
-				ctx.strokeStyle = prev_strokeStyle;
+				ctx.fillStyle = prev_strokeStyle;
 
 				var _iteratorNormalCompletion2 = true;
 				var _didIteratorError2 = false;

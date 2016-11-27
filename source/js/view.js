@@ -26,7 +26,7 @@ export default class View {
 
 		this.drawGrid();
 
-		this.temp();
+		// this.temp();
 
 		let map = this.world.map;
 		let players = this.world.players;

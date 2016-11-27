@@ -7,8 +7,8 @@ export default class Player {
 	constructor(world) {
 		this.pos = new Vec(0, 0);
 		this.nextPos = new Vec(0, 0);
-		this.width = config.MAIN_SIZE - 1;
-		this.height = config.MAIN_SIZE - 1;
+		this.width = config.MAIN_SIZE;
+		this.height = config.MAIN_SIZE;
 		this.speed = new Vec(0, 0);
 		this.world = world;
 
@@ -20,38 +20,40 @@ export default class Player {
 		this.drawCollisions = [];
 		let input = this.world.input;
 
-		// this.nextPos = this.pos.copy();
-		this.nextPos = this.world.input.mousePos;
+		this.nextPos = this.pos.copy();
+		// this.nextPos = this.world.input.mousePos;
+
+		let tempVel = 1;
 
 		if (input.keys.LEFT) {
-			this.nextPos.x -= 5;
+			this.nextPos.x -= tempVel;
 		}
 
 		if (input.keys.RIGHT) {
-			this.nextPos.x += 5;
+			this.nextPos.x += tempVel;
 		}
 
 		if (input.keys.UP) {
-			this.nextPos.y -= 5;
+			this.nextPos.y -= tempVel;
 		}
 
 		if (input.keys.DOWN) {
-			this.nextPos.y += 5;
+			this.nextPos.y += tempVel;
 		}
 
-		this.checkCollide2();
+		this.move();
 
 		// 	.add(config.GRAVITY.x, config.GRAVITY.y);
 	}
 
 	tick() {
-		// console.log(`From: ${this.pos.x} ${this.pos.y}, to: ${this.nextPos.x} ${this.nextPos.y}`);
-		// this.pos = this.nextPos;
+		this.pos = this.nextPos.copy();
 	}
 
-	checkCollide2() {
+	move() {
 		let _from = this.pos;
-		let _to = this.nextPos;
+		let _to = this.nextPos.copy();
+		let prevPos = _from.copy();
 
 		// корень из суммы квадратов координат
 		let len = Math.round(
@@ -61,9 +63,7 @@ export default class Player {
 			)
 		);
 
-		let checkedPos = [];
-
-		for (let i = 0; i < len; i += config.COLLIDE_SEPARATE_WIDTH) {
+		for (let i = 0; i < len; i += 0.5) {
 			let sinA = -(_from.x - _to.x) /
 				Math.sqrt(
 					Math.pow(_from.x - _to.x, 2) + Math.pow(_from.y - _to.y, 2)
@@ -74,236 +74,71 @@ export default class Player {
 					Math.pow(_from.x - _to.x, 2) + Math.pow(_to.y - _from.y, 2)
 				);
 
-			// TODO: .round ?
-			let nextX = Math.round(_from.x + sinA * i);
-			let nextY = Math.round(_from.y + cosA * i);
-
-			let coordsStr = `${nextX}:${nextY}`;
-
-			if (!checkedPos[coordsStr]) {
-
-				// just something, 1 просто для минимального ресурса памяти
-				checkedPos[coordsStr] = 1;
-			} else {
-			}
-
-			coords.push(`${nextX}: ${nextY}`);
-			// let drawingTileCoords = normalizeCorrdsToTile(_from.x + sinA * i, _from.y + cosA * i);
-			// let checkedStr = `${drawingTileCoords.x}:${drawingTileCoords.y}`;
-
-			// if (checkedTiles.indexOf(checkedStr) === -1) {
-			// 	checkedTiles.push(checkedStr);
-			// 	this.drawCollisions.push({ x: drawingTileCoords.x, y: drawingTileCoords.y });
-			// }
-		}
-
-		document.querySelector('#debug').innerHTML = coords.join('<br>');
-	}
-
-	checkCollide() {
-		let _to = this.nextPos;
-
-		let edgesToCheck = [];
-
-		// идем вправо
-		if (this.nextPos.x > this.pos.x) {
-
-			// и вверх
-			if (this.nextPos.y < this.pos.y) {
-				edgesToCheck.push(
-					// правый верхний
-					{
-						x: this.pos.x + this.width + 1,
-						y: this.pos.y - 1
-					},
-					// левый верхний
-					{
-						x: this.pos.x,
-						y: this.pos.y - 1
-					},
-					// правый нижний
-					{
-						x: this.pos.x + this.width + 1,
-						y: this.pos.y + this.height
-					}
-				);
-			}
-
-			// или вниз
-			else if (this.nextPos.y > this.pos.y) {
-				edgesToCheck.push(
-					// правый нижний
-					{
-						x: this.pos.x + this.width + 1,
-						y: this.pos.y + this.height + 1
-					},
-					// левый нижний
-					{
-						x: this.pos.x,
-						y: this.pos.y + this.height + 1
-					},
-					// правый верхний
-					{
-						x: this.pos.x + this.width + 1,
-						y: this.pos.y + this.height
-					}
-				);
-			}
-
-			// ровно вправо
-			else {
-				edgesToCheck.push(
-					// right top
-					{ x: this.pos.x + this.width + 1, y: this.pos.y },
-					// right bottom
-					{ x: this.pos.x + this.width + 1, y: this.pos.y + this.height }
-				);
-			}
-		}
-
-		// идем влево
-		else if (this.nextPos.x < this.pos.x) {
-
-			// и вверх
-			if (this.nextPos.y < this.pos.y) {
-				edgesToCheck.push(
-					// левый верхний
-					{
-						x: this.pos.x - 1,
-						y: this.pos.y - 1
-					},
-					// левый нижний
-					{
-						x: this.pos.x - 1,
-						y: this.pos.y
-					},
-					// правый верхний
-					{
-						x: this.pos.x + this.width,
-						y: this.pos.y - 1
-					}
-				);
-			}
-
-			// или вниз
-			else if (this.nextPos.y > this.pos.y) {
-				edgesToCheck.push(
-					// левый нижний
-					{
-						x: this.pos.x + this.width - 1,
-						y: this.pos.y + this.height + 1
-					},
-					// левый верхний
-					{
-						x: this.pos.x,
-						y: this.pos.y
-					},
-					// правый нижний
-					{
-						x: this.pos.x + this.width,
-						y: this.pos.y + this.height + 1
-					}
-				);
-			}
-
-			// ровно влево
-			else {
-				edgesToCheck.push(
-					// левый верхний
-					{ x: this.pos.x - 1, y: this.pos.y },
-					// левый нижний
-					{ x: this.pos.x - 1, y: this.pos.y + this.height }
-				);
-			}
-		}
-
-		// идем по вертикали ровно вверх\вниз
-		else if (this.nextPos.x === this.pos.x) {
-
-			// вверх
-			if (this.nextPos.y < this.pos.y) {
-				edgesToCheck.push(
-					// левый верхний
-					{
-						x: this.pos.x,
-						y: this.pos.y - 1
-					},
-					// правый верхний
-					{
-						x: this.pos.x + this.width,
-						y: this.pos.y - 1
-					},
-				);
-			}
-
-			// вниз
-			else if (this.nextPos.y > this.pos.y) {
-				edgesToCheck.push(
-					// левый нижний
-					{
-						x: this.pos.x,
-						y: this.pos.y + this.height + 1
-					},
-					// правый нижний
-					{
-						x: this.pos.x + this.width,
-						y: this.pos.y + this.height + 1
-					},
-				);
-			}
-		}
-
-		for (let edge of edgesToCheck) {
-			let _from = edge;
-
-			// корень из суммы квадратов координат
-			let len = Math.round(
-				Math.sqrt(
-					Math.pow(Math.abs(_to.x - _from.x), 2) +
-					Math.pow(Math.abs(_to.y - _from.y), 2)
-				)
+			let virtualPos = new Vec(
+				Math.floor(_from.x + sinA * i),
+				Math.floor(_from.y + cosA * i)
 			);
 
-			let checkedTiles = [];
-			for (let i = 0; i < len; i += config.COLLIDE_SEPARATE_WIDTH) {
-				let sinA = -(_from.x - _to.x) /
-					Math.sqrt(
-						Math.pow(_from.x - _to.x, 2) + Math.pow(_from.y - _to.y, 2)
-					);
-
-				let cosA = -(_from.y - _to.y) /
-					Math.sqrt(
-						Math.pow(_from.x - _to.x, 2) + Math.pow(_to.y - _from.y, 2)
-					);
-
-				let drawingTileCoords = normalizeCorrdsToTile(_from.x + sinA * i, _from.y + cosA * i);
-				let checkedStr = `${drawingTileCoords.x}:${drawingTileCoords.y}`;
-
-				if (checkedTiles.indexOf(checkedStr) === -1) {
-					checkedTiles.push(checkedStr);
-					this.drawCollisions.push({ x: drawingTileCoords.x, y: drawingTileCoords.y });
-				}
+			if (prevPos.x === virtualPos.x && prevPos.y === virtualPos.y) {
+				continue;
 			}
+
+			// проверям сначало X
+			if (this.checkCollide({ x: virtualPos.x, y: prevPos.y })) {
+				// оставляем X, добавляем Y
+				this.pos = new Vec(prevPos.x, prevPos.y);
+				this.nextPos = new Vec(prevPos.x, this.nextPos.y);
+
+				return this.move();
+			}
+
+			// потом Y
+			else if (this.checkCollide({ x: prevPos.x, y: virtualPos.y })) {
+				// оставляем Y, добавляем X
+				this.pos = new Vec(prevPos.x, prevPos.y);
+				this.nextPos = new Vec(this.nextPos.x, prevPos.y);
+
+				return this.move();
+			}
+
+			// идем дальше
+			prevPos = virtualPos;
 		}
 
-		// drawCollisionRectangle(posTo.x, posTo.y);
+		this.nextPos = _to;
+	}
 
-		function normalizeCorrdsToTile(x, y) {
-			return {
-				x: x - (x % config.MAIN_SIZE),
-				y: y - (y % config.MAIN_SIZE)
-			};
+	checkCollide(pos) {
+		let map = this.world.map;
+
+		let tiles = [
+			// top left
+			map.getTile(pos.x, pos.y),
+			// top right
+			map.getTile(pos.x + this.width - 1, pos.y),
+			// bottom left
+			map.getTile(pos.x, pos.y + this.height - 1),
+			// bottom right
+			map.getTile(pos.x + this.width - 1, pos.y + this.height - 1)
+		];
+
+		for (let tile of tiles) {
+			if (tile && tile.type === 'SOLID') {
+				return true;
+			}
 		}
 	}
 
 	render(ctx) {
-		let prev_strokeStyle = ctx.strokeStyle;
+		let prev_strokeStyle = ctx.fillStyle;
 
-		ctx.strokeStyle = 'rgba(0, 0, 0, .8)';
-		// ctx.rect(this.pos.x, this.pos.y, config.MAIN_SIZE, config.MAIN_SIZE);
-		// ctx.stroke();
+		ctx.beginPath();
+		ctx.fillStyle = '#09f';
+		ctx.rect(this.pos.x, this.pos.y, this.width, this.height);
+		ctx.fill();
+		ctx.closePath();
 
-		ctx.strokeStyle = prev_strokeStyle;
+		ctx.fillStyle = prev_strokeStyle;
 
 		for (let i of this.drawCollisions) {
 			// console.log(i.x, i.y);

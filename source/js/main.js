@@ -13,23 +13,77 @@ let world = new World();
 
 let map = new WorldMap({
 	tiles: [
-		new TileSolid({ pos: new Vec(3, 8) }),
-		new TileSolid({ pos: new Vec(4, 8) }),
-		new TileSolid({ pos: new Vec(5, 8) }),
-		new TileSolid({ pos: new Vec(6, 8) }),
-		new TileSolid({ pos: new Vec(7, 8) }),
-		new TileSolid({ pos: new Vec(8, 8) }),
-		new TileSolid({ pos: new Vec(9, 8) }),
-		new TileSolid({ pos: new Vec(10, 8) }),
-		new TileSolid({ pos: new Vec(11, 8) }),
-		new TileSolid({ pos: new Vec(12, 8) }),
-		new TileSolid({ pos: new Vec(14, 8) }),
-		new TileSolid({ pos: new Vec(15, 8) }),
-		new TileSolid({ pos: new Vec(16, 8) }),
-		new TileSolid({ pos: new Vec(17, 8) }),
-		new TileSolid({ pos: new Vec(18, 8) }),
-		new TileSolid({ pos: new Vec(19, 8) }),
-		new TileSolid({ pos: new Vec(20, 8) })
+		// top bar
+		new TileSolid({ pos: new Vec(2, 2) }),
+		new TileSolid({ pos: new Vec(3, 2) }),
+		new TileSolid({ pos: new Vec(4, 2) }),
+		new TileSolid({ pos: new Vec(5, 2) }),
+		new TileSolid({ pos: new Vec(6, 2) }),
+		new TileSolid({ pos: new Vec(7, 2) }),
+		new TileSolid({ pos: new Vec(8, 2) }),
+		new TileSolid({ pos: new Vec(9, 2) }),
+		new TileSolid({ pos: new Vec(10, 2) }),
+		new TileSolid({ pos: new Vec(11, 2) }),
+		new TileSolid({ pos: new Vec(12, 2) }),
+		new TileSolid({ pos: new Vec(13, 2) }),
+		new TileSolid({ pos: new Vec(14, 2) }),
+		new TileSolid({ pos: new Vec(15, 2) }),
+		new TileSolid({ pos: new Vec(16, 2) }),
+		new TileSolid({ pos: new Vec(17, 2) }),
+		new TileSolid({ pos: new Vec(18, 2) }),
+		new TileSolid({ pos: new Vec(19, 2) }),
+		new TileSolid({ pos: new Vec(20, 2) }),
+		new TileSolid({ pos: new Vec(21, 2) }),
+		new TileSolid({ pos: new Vec(22, 2) }),
+		new TileSolid({ pos: new Vec(23, 2) }),
+		new TileSolid({ pos: new Vec(24, 2) }),
+		new TileSolid({ pos: new Vec(25, 2) }),
+
+		// left
+		new TileSolid({ pos: new Vec(2, 3) }),
+		new TileSolid({ pos: new Vec(2, 4) }),
+		new TileSolid({ pos: new Vec(2, 5) }),
+		new TileSolid({ pos: new Vec(2, 6) }),
+		new TileSolid({ pos: new Vec(2, 7) }),
+		new TileSolid({ pos: new Vec(2, 8) }),
+		new TileSolid({ pos: new Vec(2, 9) }),
+		new TileSolid({ pos: new Vec(2, 10) }),
+		new TileSolid({ pos: new Vec(2, 11) }),
+
+		// bottom
+		new TileSolid({ pos: new Vec(3, 11) }),
+		new TileSolid({ pos: new Vec(4, 11) }),
+		new TileSolid({ pos: new Vec(5, 11) }),
+		new TileSolid({ pos: new Vec(6, 11) }),
+		new TileSolid({ pos: new Vec(7, 11) }),
+		new TileSolid({ pos: new Vec(8, 11) }),
+		new TileSolid({ pos: new Vec(9, 11) }),
+		new TileSolid({ pos: new Vec(10, 11) }),
+		new TileSolid({ pos: new Vec(11, 11) }),
+		new TileSolid({ pos: new Vec(12, 11) }),
+		new TileSolid({ pos: new Vec(13, 11) }),
+		new TileSolid({ pos: new Vec(14, 11) }),
+		new TileSolid({ pos: new Vec(15, 11) }),
+		new TileSolid({ pos: new Vec(16, 11) }),
+		new TileSolid({ pos: new Vec(17, 11) }),
+		new TileSolid({ pos: new Vec(18, 11) }),
+		new TileSolid({ pos: new Vec(19, 11) }),
+		new TileSolid({ pos: new Vec(20, 11) }),
+		new TileSolid({ pos: new Vec(21, 11) }),
+		new TileSolid({ pos: new Vec(22, 11) }),
+		new TileSolid({ pos: new Vec(23, 11) }),
+		new TileSolid({ pos: new Vec(24, 11) }),
+		new TileSolid({ pos: new Vec(25, 11) }),
+
+		// right
+		new TileSolid({ pos: new Vec(25, 10) }),
+		new TileSolid({ pos: new Vec(25, 9) }),
+		new TileSolid({ pos: new Vec(25, 8) }),
+		new TileSolid({ pos: new Vec(25, 7) }),
+		new TileSolid({ pos: new Vec(25, 6) }),
+		new TileSolid({ pos: new Vec(25, 5) }),
+		new TileSolid({ pos: new Vec(25, 4) }),
+		new TileSolid({ pos: new Vec(25, 3) }),
 	]
 });
 
@@ -37,7 +91,7 @@ world.setMap(map);
 
 
 let player = new Player(world);
-player.pos.set(280, 160);
+player.pos.set(520, 281);
 
 world.addPlayer(player);
 world.setControlPlayer(player);

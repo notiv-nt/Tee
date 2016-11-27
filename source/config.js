@@ -8,8 +8,5 @@ export default {
 	GRAVITY: {
 		x: 0,
 		y: 10
-	},
-
-	// TODO: ?
-	COLLIDE_SEPARATE_WIDTH: 1
+	}
 }
