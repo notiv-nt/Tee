@@ -24,12 +24,39 @@ export default class Vec {
 		return this;
 	}
 
+	divide(a) {
+		this.x /= a;
+		this.y /= a;
+
+		return this;
+	}
+
 	// TODO: add({ x: , y: })
 	add(x, y) {
 		this.x += x;
 		this.y += y;
 
 		return this;
+	}
+
+	subtract(x, y) {
+		this.x -= x;
+		this.y -= y;
+
+		return this;
+	}
+
+	distance(vec2) {
+	  let x = this.x - vec2.x;
+	  let y = this.y - vec2.y;
+
+	  return Math.sqrt(x*x + y*y);
+	}
+
+	length() {
+		let x = this.x, y = this.y;
+
+		return Math.sqrt(x*x + y*y);
 	}
 
 	copy() {

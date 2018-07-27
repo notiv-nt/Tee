@@ -1,4 +1,3 @@
-
 import Input from './input';
 
 
@@ -7,15 +6,15 @@ export default class World {
 		this.players = [];
 		this.map = null;
 		// ms
-		this.tickInterval = 16;
-		// this.tickInterval = 1000;
+		// this.tickInterval = 16;
+		this.tickInterval = 70;
 		this.controlPlayer = null;
 
 		this.input = new Input();
 	}
 
 	// prepare data
-	preTick() {
+/*	preTick() {
 		// console.log('World: preTick');
 
 		let players = this.players;
@@ -25,7 +24,7 @@ export default class World {
 				player.preTick();
 			}
 		}
-	}
+	} */
 
 	// calculate everything
 	tick() {
@@ -41,13 +40,13 @@ export default class World {
 	}
 
 	// clear
-	postTick() {}
+	// postTick() {}
 
 	start() {
 		setInterval(() => {
-			this.preTick();
+			// this.preTick();
 			this.tick();
-			this.postTick();
+			// this.postTick();
 		}, this.tickInterval);
 	}
 

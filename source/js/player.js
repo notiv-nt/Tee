@@ -1,4 +1,3 @@
-
 import config from 'config';
 import Vec from './lib/vec';
 
@@ -6,56 +5,63 @@ import Vec from './lib/vec';
 export default class Player {
 	constructor(world) {
 		this.pos = new Vec(0, 0);
-		this.nextPos = new Vec(0, 0);
+		this.virtualPos = new Vec(0, 0);
 		this.width = config.MAIN_SIZE;
 		this.height = config.MAIN_SIZE;
 		this.speed = new Vec(0, 0);
 		this.world = world;
+		this.velocity = new Vec(0, 0);
 
 		// TEMP:
 		this.drawCollisions = [];
 	}
 
+	// reset everything before new cycle
 	preTick() {
-		this.drawCollisions = [];
 		let input = this.world.input;
 
-		this.nextPos = this.pos.copy();
-		// this.nextPos = this.world.input.mousePos;
+		this.drawCollisions = [];
 
-		let tempVel = 1;
+		// set virtual position as your current position
+		this.virtualPos = this.pos.copy();
 
-		if (input.keys.LEFT) {
-			this.nextPos.x -= tempVel;
-		}
+		// handle input keys
+		if (input.keys.LEFT) { this.velocity.add(-4, 0); }
+		if (input.keys.RIGHT) { this.velocity.add(4, 0); }
+		if (input.keys.UP) { this.velocity.add(0, -4); }
+		if (input.keys.DOWN) { this.velocity.add(0, 4); }
 
-		if (input.keys.RIGHT) {
-			this.nextPos.x += tempVel;
-		}
+		// attach to the cursor
+		// let mousePos = this.world.input.mousePos;
+		// this.velocity.x += (mousePos.x - this.virtualPos.x) * .7;
+		// this.velocity.y += (mousePos.y - this.virtualPos.y) * .7;
 
-		if (input.keys.UP) {
-			this.nextPos.y -= tempVel;
-		}
+		// TODO: add grativy velocity
+		// this.nextPos.add(config.GRAVITY.x, config.GRAVITY.y);
 
-		if (input.keys.DOWN) {
-			this.nextPos.y += tempVel;
-		}
+		// add force to virtual position
+		this.virtualPos.x += this.velocity.x;
+		this.virtualPos.y += this.velocity.y;
 
-		this.move();
-
-		// 	.add(config.GRAVITY.x, config.GRAVITY.y);
+		// reduce velocity for next cycle
+		// TODO: move to postTick
+		this.velocity.x = Math.abs(this.velocity.x < 0.1) ? 0 : this.velocity.x * .9;
+		this.velocity.y = Math.abs(this.velocity.y < 0.1) ? 0 : this.velocity.y * .9;
 	}
 
 	tick() {
-		this.pos = this.nextPos.copy();
+		this.preTick();
+
+		this.move();
+
+		this.pos = this.virtualPos.copy();
 	}
 
 	move() {
 		let _from = this.pos;
-		let _to = this.nextPos.copy();
-		let prevPos = _from.copy();
+		let _to = this.virtualPos.copy();
 
-		// корень из суммы квадратов координат
+		// The length between the current position and the position in which we must set
 		let len = Math.round(
 			Math.sqrt(
 				Math.pow(Math.abs(_to.x - _from.x), 2) +
@@ -63,7 +69,10 @@ export default class Player {
 			)
 		);
 
-		for (let i = 0; i < len; i += 0.5) {
+		// loop from 0 (start position) and length (end position)
+		let collideX = false, collideY = false;;
+		let prevPos = _from.copy();
+		for (let i = 0; i < len; i += 0.2) {
 			let sinA = -(_from.x - _to.x) /
 				Math.sqrt(
 					Math.pow(_from.x - _to.x, 2) + Math.pow(_from.y - _to.y, 2)
@@ -74,38 +83,48 @@ export default class Player {
 					Math.pow(_from.x - _to.x, 2) + Math.pow(_to.y - _from.y, 2)
 				);
 
-			let virtualPos = new Vec(
-				Math.floor(_from.x + sinA * i),
-				Math.floor(_from.y + cosA * i)
-			);
+			let virtualPos = {
+				x: Math.floor(_from.x + sinA * i),
+				y: Math.floor(_from.y + cosA * i)
+			}
 
 			if (prevPos.x === virtualPos.x && prevPos.y === virtualPos.y) {
 				continue;
 			}
 
-			// проверям сначало X
-			if (this.checkCollide({ x: virtualPos.x, y: prevPos.y })) {
+			// check X first
+			if (!collideX && this.checkCollide({ x: virtualPos.x, y: prevPos.y })) {
+				// okay, we touch the solid block
+				virtualPos.x = prevPos.x;
+				collideX = true;
 				// оставляем X, добавляем Y
-				this.pos = new Vec(prevPos.x, prevPos.y);
-				this.nextPos = new Vec(prevPos.x, this.nextPos.y);
+				// this.pos = new Vec(prevPos.x, prevPos.y);
+				// this.nextPos = new Vec(prevPos.x, this.nextPos.y);
 
-				return this.move();
+				// return this.move();
 			}
 
-			// потом Y
-			else if (this.checkCollide({ x: prevPos.x, y: virtualPos.y })) {
+			// then Y
+			if (!collideY && this.checkCollide({ x: virtualPos.x, y: virtualPos.y })) {
+				collideY = true;
+				virtualPos.y = prevPos.y;
 				// оставляем Y, добавляем X
-				this.pos = new Vec(prevPos.x, prevPos.y);
-				this.nextPos = new Vec(this.nextPos.x, prevPos.y);
+				// this.pos = new Vec(prevPos.x, prevPos.y);
+				// this.nextPos = new Vec(this.nextPos.x, prevPos.y);
 
-				return this.move();
+				// return this.move();
 			}
 
-			// идем дальше
+			// We didn't touch anything, set current virtual position
 			prevPos = virtualPos;
+
+			if (collideX && collideY) {
+				break;
+			}
 		}
 
-		this.nextPos = _to;
+		this.virtualPos.x = prevPos.x;
+		this.virtualPos.y = prevPos.y;
 	}
 
 	checkCollide(pos) {
