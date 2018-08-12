@@ -1,13 +1,12 @@
 import Input from './input';
 
-
 export default class World {
 	constructor() {
 		this.players = [];
 		this.map = null;
 		// ms
-		// this.tickInterval = 16;
-		this.tickInterval = 70;
+		this.tickInterval = 16;
+		// this.tickInterval = 50;
 		this.controlPlayer = null;
 
 		this.input = new Input();

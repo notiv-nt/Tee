@@ -1,4 +1,3 @@
-
 import 'styles/main.styl';
 
 import World from './world';
@@ -133,3 +132,13 @@ document.addEventListener('click', function() {
 		i = 0;
 	}
 });
+
+let debugElem = document.querySelector('#debug');
+window.log = function(msg) {
+	let str = '';
+	for (let arg of arguments) {
+		str += JSON.stringify(arg) + ' ';
+	}
+
+  debugElem.innerHTML = str;
+}

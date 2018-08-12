@@ -1,4 +1,3 @@
-
 export default {
 	MAIN_SIZE: 40,
 

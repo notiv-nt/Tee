@@ -42,7 +42,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -85,7 +85,12 @@
 		new _TileSolid2.default({ pos: new _vec2.default(2, 3) }), new _TileSolid2.default({ pos: new _vec2.default(2, 4) }), new _TileSolid2.default({ pos: new _vec2.default(2, 5) }), new _TileSolid2.default({ pos: new _vec2.default(2, 6) }), new _TileSolid2.default({ pos: new _vec2.default(2, 7) }), new _TileSolid2.default({ pos: new _vec2.default(2, 8) }), new _TileSolid2.default({ pos: new _vec2.default(2, 9) }), new _TileSolid2.default({ pos: new _vec2.default(2, 10) }), new _TileSolid2.default({ pos: new _vec2.default(2, 11) }),
 
 		// bottom
-		new _TileSolid2.default({ pos: new _vec2.default(3, 11) }), new _TileSolid2.default({ pos: new _vec2.default(4, 11) }), new _TileSolid2.default({ pos: new _vec2.default(5, 11) }), new _TileSolid2.default({ pos: new _vec2.default(6, 11) }), new _TileSolid2.default({ pos: new _vec2.default(7, 11) }), new _TileSolid2.default({ pos: new _vec2.default(8, 11) }), new _TileSolid2.default({ pos: new _vec2.default(9, 11) }), new _TileSolid2.default({ pos: new _vec2.default(10, 11) }), new _TileSolid2.default({ pos: new _vec2.default(11, 11) }), new _TileSolid2.default({ pos: new _vec2.default(12, 11) }), new _TileSolid2.default({ pos: new _vec2.default(13, 11) }), new _TileSolid2.default({ pos: new _vec2.default(14, 11) }), new _TileSolid2.default({ pos: new _vec2.default(15, 11) }), new _TileSolid2.default({ pos: new _vec2.default(16, 11) }), new _TileSolid2.default({ pos: new _vec2.default(17, 11) }), new _TileSolid2.default({ pos: new _vec2.default(18, 11) }), new _TileSolid2.default({ pos: new _vec2.default(19, 11) }), new _TileSolid2.default({ pos: new _vec2.default(20, 11) }), new _TileSolid2.default({ pos: new _vec2.default(21, 11) }), new _TileSolid2.default({ pos: new _vec2.default(22, 11) }), new _TileSolid2.default({ pos: new _vec2.default(23, 11) }), new _TileSolid2.default({ pos: new _vec2.default(24, 11) }), new _TileSolid2.default({ pos: new _vec2.default(25, 11) }),
+		new _TileSolid2.default({ pos: new _vec2.default(3, 11) }), new _TileSolid2.default({ pos: new _vec2.default(4, 11) }), new _TileSolid2.default({ pos: new _vec2.default(5, 11) }), new _TileSolid2.default({ pos: new _vec2.default(6, 11) }), new _TileSolid2.default({ pos: new _vec2.default(7, 11) }), new _TileSolid2.default({ pos: new _vec2.default(8, 11) }), new _TileSolid2.default({ pos: new _vec2.default(9, 11) }), new _TileSolid2.default({ pos: new _vec2.default(9, 12) }), new _TileSolid2.default({ pos: new _vec2.default(9, 13) }), new _TileSolid2.default({ pos: new _vec2.default(9, 14) }), new _TileSolid2.default({ pos: new _vec2.default(9, 15) }),
+		// new TileSolid({ pos: new Vec(10, 11) }),
+		// new TileSolid({ pos: new Vec(11, 11) }),
+		// new TileSolid({ pos: new Vec(12, 11) }),
+
+		new _TileSolid2.default({ pos: new _vec2.default(13, 12) }), new _TileSolid2.default({ pos: new _vec2.default(12, 16) }), new _TileSolid2.default({ pos: new _vec2.default(11, 16) }), new _TileSolid2.default({ pos: new _vec2.default(10, 16) }), new _TileSolid2.default({ pos: new _vec2.default(9, 16) }), new _TileSolid2.default({ pos: new _vec2.default(13, 16) }), new _TileSolid2.default({ pos: new _vec2.default(14, 16) }), new _TileSolid2.default({ pos: new _vec2.default(15, 16) }), new _TileSolid2.default({ pos: new _vec2.default(16, 16) }), new _TileSolid2.default({ pos: new _vec2.default(17, 16) }), new _TileSolid2.default({ pos: new _vec2.default(18, 16) }), new _TileSolid2.default({ pos: new _vec2.default(19, 16) }), new _TileSolid2.default({ pos: new _vec2.default(19, 15) }), new _TileSolid2.default({ pos: new _vec2.default(19, 14) }), new _TileSolid2.default({ pos: new _vec2.default(19, 13) }), new _TileSolid2.default({ pos: new _vec2.default(19, 12) }), new _TileSolid2.default({ pos: new _vec2.default(13, 11) }), new _TileSolid2.default({ pos: new _vec2.default(14, 11) }), new _TileSolid2.default({ pos: new _vec2.default(15, 11) }), new _TileSolid2.default({ pos: new _vec2.default(16, 11) }), new _TileSolid2.default({ pos: new _vec2.default(17, 11) }), new _TileSolid2.default({ pos: new _vec2.default(18, 11) }), new _TileSolid2.default({ pos: new _vec2.default(19, 11) }), new _TileSolid2.default({ pos: new _vec2.default(20, 11) }), new _TileSolid2.default({ pos: new _vec2.default(21, 11) }), new _TileSolid2.default({ pos: new _vec2.default(22, 11) }), new _TileSolid2.default({ pos: new _vec2.default(23, 11) }), new _TileSolid2.default({ pos: new _vec2.default(24, 11) }), new _TileSolid2.default({ pos: new _vec2.default(25, 11) }),
 
 		// right
 		new _TileSolid2.default({ pos: new _vec2.default(25, 10) }), new _TileSolid2.default({ pos: new _vec2.default(25, 9) }), new _TileSolid2.default({ pos: new _vec2.default(25, 8) }), new _TileSolid2.default({ pos: new _vec2.default(25, 7) }), new _TileSolid2.default({ pos: new _vec2.default(25, 6) }), new _TileSolid2.default({ pos: new _vec2.default(25, 5) }), new _TileSolid2.default({ pos: new _vec2.default(25, 4) }), new _TileSolid2.default({ pos: new _vec2.default(25, 3) })]
@@ -113,9 +118,40 @@
 		}
 	});
 
-/***/ },
+	var debugElem = document.querySelector('#debug');
+	window.log = function (msg) {
+		var str = '';
+		var _iteratorNormalCompletion = true;
+		var _didIteratorError = false;
+		var _iteratorError = undefined;
+
+		try {
+			for (var _iterator = arguments[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+				var arg = _step.value;
+
+				str += JSON.stringify(arg) + ' ';
+			}
+		} catch (err) {
+			_didIteratorError = true;
+			_iteratorError = err;
+		} finally {
+			try {
+				if (!_iteratorNormalCompletion && _iterator.return) {
+					_iterator.return();
+				}
+			} finally {
+				if (_didIteratorError) {
+					throw _iteratorError;
+				}
+			}
+		}
+
+		debugElem.innerHTML = str;
+	};
+
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
@@ -129,8 +165,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?camelCase&localIdentName=[name]__[local]___[hash:base64:5]!./../../node_modules/postcss-loader/index.js!./../../node_modules/stylus-loader/index.js?resolve url!./main.styl", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?camelCase&localIdentName=[name]__[local]___[hash:base64:5]!./../../node_modules/postcss-loader/index.js!./../../node_modules/stylus-loader/index.js?resolve url!./main.styl");
+			module.hot.accept("!!../../node_modules/css-loader/index.js?camelCase&localIdentName=[name]__[local]___[hash:base64:5]!../../node_modules/postcss-loader/index.js!../../node_modules/stylus-loader/index.js?resolve url!./main.styl", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js?camelCase&localIdentName=[name]__[local]___[hash:base64:5]!../../node_modules/postcss-loader/index.js!../../node_modules/stylus-loader/index.js?resolve url!./main.styl");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -139,23 +175,23 @@
 		module.hot.dispose(function() { update(); });
 	}
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "*,\n*:before,\n*:after {\n  box-sizing: border-box;\n  cursor: default !important;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\nhtml {\n  font: 400 15px/1.4 'Roboto', sans-serif;\n}\nbody {\n  margin: 0;\n}\nhtml,\nbody {\n  width: 100vw;\n  height: 100vh;\n  overflow: hidden;\n}\n#debug {\n  position: fixed;\n  z-index: 10;\n  top: 20px;\n  right: 20px;\n  background-color: rgba(0,0,0,0.8);\n  color: #fff;\n  padding: 10px 15px;\n  max-width: 200px;\n  border-radius: 4px;\n}\n", ""]);
+	exports.push([module.id, "*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  cursor: default !important;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\nhtml,\nbody {\n  width: 100vw;\n  height: 100vh;\n  overflow: hidden;\n}\nbody {\n  margin: 0;\n  font: 400 15px/1.4 'Roboto', sans-serif;\n}\n#debug {\n  position: fixed;\n  z-index: 10;\n  top: 20px;\n  right: 20px;\n  background-color: rgba(0,0,0,0.8);\n  color: #fff;\n  padding: 10px 15px;\n  min-width: 200px;\n  max-width: 400px;\n  border-radius: 4px;\n}\n", ""]);
 
 	// exports
 
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -209,9 +245,9 @@
 	};
 
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
@@ -226,7 +262,7 @@
 			};
 		},
 		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
+			return /msie [6-9]\b/.test(self.navigator.userAgent.toLowerCase());
 		}),
 		getHeadElement = memoize(function () {
 			return document.head || document.getElementsByTagName("head")[0];
@@ -461,9 +497,9 @@
 	}
 
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -489,19 +525,32 @@
 			this.map = null;
 			// ms
 			this.tickInterval = 16;
-			// this.tickInterval = 1000;
+			// this.tickInterval = 50;
 			this.controlPlayer = null;
 
 			this.input = new _input2.default();
 		}
 
 		// prepare data
+		/*	preTick() {
+	 		// console.log('World: preTick');
+	 
+	 		let players = this.players;
+	 
+	 		if (players.length) {
+	 			for (let player of players) {
+	 				player.preTick();
+	 			}
+	 		}
+	 	} */
+
+		// calculate everything
 
 
 		_createClass(World, [{
-			key: 'preTick',
-			value: function preTick() {
-				// console.log('World: preTick');
+			key: 'tick',
+			value: function tick() {
+				// console.log('World: tick');
 
 				var players = this.players;
 
@@ -514,7 +563,7 @@
 						for (var _iterator = players[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
 							var player = _step.value;
 
-							player.preTick();
+							player.tick();
 						}
 					} catch (err) {
 						_didIteratorError = true;
@@ -533,57 +582,18 @@
 				}
 			}
 
-			// calculate everything
-
-		}, {
-			key: 'tick',
-			value: function tick() {
-				// console.log('World: tick');
-
-				var players = this.players;
-
-				if (players.length) {
-					var _iteratorNormalCompletion2 = true;
-					var _didIteratorError2 = false;
-					var _iteratorError2 = undefined;
-
-					try {
-						for (var _iterator2 = players[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-							var player = _step2.value;
-
-							player.tick();
-						}
-					} catch (err) {
-						_didIteratorError2 = true;
-						_iteratorError2 = err;
-					} finally {
-						try {
-							if (!_iteratorNormalCompletion2 && _iterator2.return) {
-								_iterator2.return();
-							}
-						} finally {
-							if (_didIteratorError2) {
-								throw _iteratorError2;
-							}
-						}
-					}
-				}
-			}
-
 			// clear
+			// postTick() {}
 
-		}, {
-			key: 'postTick',
-			value: function postTick() {}
 		}, {
 			key: 'start',
 			value: function start() {
 				var _this = this;
 
 				setInterval(function () {
-					_this.preTick();
+					// this.preTick();
 					_this.tick();
-					_this.postTick();
+					// this.postTick();
 				}, this.tickInterval);
 			}
 		}, {
@@ -621,9 +631,9 @@
 
 	exports.default = World;
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -757,9 +767,9 @@
 
 	exports.default = Input;
 
-/***/ },
+/***/ }),
 /* 7 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	'use strict';
 
@@ -797,6 +807,14 @@
 
 				return this;
 			}
+		}, {
+			key: 'divide',
+			value: function divide(a) {
+				this.x /= a;
+				this.y /= a;
+
+				return this;
+			}
 
 			// TODO: add({ x: , y: })
 
@@ -807,6 +825,30 @@
 				this.y += y;
 
 				return this;
+			}
+		}, {
+			key: 'subtract',
+			value: function subtract(x, y) {
+				this.x -= x;
+				this.y -= y;
+
+				return this;
+			}
+		}, {
+			key: 'distance',
+			value: function distance(vec2) {
+				var x = this.x - vec2.x;
+				var y = this.y - vec2.y;
+
+				return Math.sqrt(x * x + y * y);
+			}
+		}, {
+			key: 'length',
+			value: function length() {
+				var x = this.x,
+				    y = this.y;
+
+				return Math.sqrt(x * x + y * y);
 			}
 		}, {
 			key: 'copy',
@@ -831,9 +873,9 @@
 
 	exports.default = Vec;
 
-/***/ },
+/***/ }),
 /* 8 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -910,9 +952,9 @@
 
 	exports.default = WorldMap;
 
-/***/ },
+/***/ }),
 /* 9 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	"use strict";
 
@@ -931,9 +973,9 @@
 		}
 	};
 
-/***/ },
+/***/ }),
 /* 10 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -981,9 +1023,9 @@
 
 	exports.default = TileSolid;
 
-/***/ },
+/***/ }),
 /* 11 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -1040,14 +1082,14 @@
 
 	exports.default = Tile;
 
-/***/ },
+/***/ }),
 /* 12 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+			value: true
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -1061,177 +1103,177 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var View = function () {
-		function View(canvasId, world) {
-			_classCallCheck(this, View);
+			function View(canvasId, world) {
+					_classCallCheck(this, View);
 
-			var canvas = document.querySelector(canvasId);
+					var canvas = document.querySelector(canvasId);
 
-			this.canvas = canvas;
-			this.ctx = canvas.getContext('2d');
-			this.width = canvas.width = window.innerWidth;
-			this.height = canvas.height = window.innerHeight;
-			this.world = world;
+					this.canvas = canvas;
+					this.ctx = canvas.getContext('2d');
+					this.width = canvas.width = window.innerWidth;
+					this.height = canvas.height = window.innerHeight;
+					this.world = world;
 
-			// -_-
-			this.render = this.render.bind(this);
-			this.init();
-		}
-
-		_createClass(View, [{
-			key: 'init',
-			value: function init() {
-				this.render();
+					// -_-
+					this.render = this.render.bind(this);
+					this.init();
 			}
-		}, {
-			key: 'render',
-			value: function render() {
-				this.ctx.clearRect(0, 0, this.width, this.height);
 
-				this.drawGrid();
-
-				// this.temp();
-
-				var map = this.world.map;
-				var players = this.world.players;
-
-				if (map) {
-					var _iteratorNormalCompletion = true;
-					var _didIteratorError = false;
-					var _iteratorError = undefined;
-
-					try {
-						for (var _iterator = map.tiles[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-							var tile = _step.value;
-
-							tile.render(this.ctx);
-						}
-					} catch (err) {
-						_didIteratorError = true;
-						_iteratorError = err;
-					} finally {
-						try {
-							if (!_iteratorNormalCompletion && _iterator.return) {
-								_iterator.return();
-							}
-						} finally {
-							if (_didIteratorError) {
-								throw _iteratorError;
-							}
-						}
+			_createClass(View, [{
+					key: 'init',
+					value: function init() {
+							this.render();
 					}
-				}
+			}, {
+					key: 'render',
+					value: function render() {
+							this.ctx.clearRect(0, 0, this.width, this.height);
 
-				if (players && players.length) {
-					var _iteratorNormalCompletion2 = true;
-					var _didIteratorError2 = false;
-					var _iteratorError2 = undefined;
+							this.drawGrid();
 
-					try {
-						for (var _iterator2 = players[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-							var player = _step2.value;
+							// this.temp();
 
-							player.render(this.ctx);
-						}
-					} catch (err) {
-						_didIteratorError2 = true;
-						_iteratorError2 = err;
-					} finally {
-						try {
-							if (!_iteratorNormalCompletion2 && _iterator2.return) {
-								_iterator2.return();
+							var map = this.world.map;
+							var players = this.world.players;
+
+							if (map) {
+									var _iteratorNormalCompletion = true;
+									var _didIteratorError = false;
+									var _iteratorError = undefined;
+
+									try {
+											for (var _iterator = map.tiles[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+													var tile = _step.value;
+
+													tile.render(this.ctx);
+											}
+									} catch (err) {
+											_didIteratorError = true;
+											_iteratorError = err;
+									} finally {
+											try {
+													if (!_iteratorNormalCompletion && _iterator.return) {
+															_iterator.return();
+													}
+											} finally {
+													if (_didIteratorError) {
+															throw _iteratorError;
+													}
+											}
+									}
 							}
-						} finally {
-							if (_didIteratorError2) {
-								throw _iteratorError2;
+
+							if (players && players.length) {
+									var _iteratorNormalCompletion2 = true;
+									var _didIteratorError2 = false;
+									var _iteratorError2 = undefined;
+
+									try {
+											for (var _iterator2 = players[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+													var player = _step2.value;
+
+													player.render(this.ctx);
+											}
+									} catch (err) {
+											_didIteratorError2 = true;
+											_iteratorError2 = err;
+									} finally {
+											try {
+													if (!_iteratorNormalCompletion2 && _iterator2.return) {
+															_iterator2.return();
+													}
+											} finally {
+													if (_didIteratorError2) {
+															throw _iteratorError2;
+													}
+											}
+									}
 							}
-						}
+
+							// setTimeout(this.render, 10);
+							requestAnimationFrame(this.render);
 					}
-				}
+			}, {
+					key: 'drawGrid',
+					value: function drawGrid() {
+							var ctx = this.ctx;
+							var prev_StrokeStyle = ctx.strokeStyle;
 
-				// setTimeout(this.render, 10);
-				requestAnimationFrame(this.render);
-			}
-		}, {
-			key: 'drawGrid',
-			value: function drawGrid() {
-				var ctx = this.ctx;
-				var prev_StrokeStyle = ctx.strokeStyle;
+							ctx.strokeStyle = 'rgba(160, 160, 160, .8)';
 
-				ctx.strokeStyle = 'rgba(160, 160, 160, .8)';
+							// draw x grid
+							for (var i = 0; i < this.height; i += _config2.default.MAIN_SIZE) {
+									ctx.beginPath();
+									ctx.moveTo(0, i);
+									ctx.lineTo(this.width, i);
+									ctx.stroke();
+									ctx.closePath();
+							}
 
-				// draw x grid
-				for (var i = 0; i < this.height; i += _config2.default.MAIN_SIZE) {
-					ctx.beginPath();
-					ctx.moveTo(0, i);
-					ctx.lineTo(this.width, i);
-					ctx.stroke();
-					ctx.closePath();
-				}
+							// draw y grid
+							for (var i = 0; i < this.width; i += _config2.default.MAIN_SIZE) {
+									ctx.beginPath();
+									ctx.moveTo(i, 0);
+									ctx.lineTo(i, this.height);
+									ctx.stroke();
+									ctx.closePath();
+							}
 
-				// draw y grid
-				for (var i = 0; i < this.width; i += _config2.default.MAIN_SIZE) {
-					ctx.beginPath();
-					ctx.moveTo(i, 0);
-					ctx.lineTo(i, this.height);
-					ctx.stroke();
-					ctx.closePath();
-				}
+							ctx.strokeStyle = prev_StrokeStyle;
+					}
+			}, {
+					key: 'temp',
+					value: function temp() {
+							var ctx = this.ctx;
+							var world = this.world;
+							var input = world.input;
+							var player = world.controlPlayer;
 
-				ctx.strokeStyle = prev_StrokeStyle;
-			}
-		}, {
-			key: 'temp',
-			value: function temp() {
-				var ctx = this.ctx;
-				var world = this.world;
-				var input = world.input;
-				var player = world.controlPlayer;
+							var cursor = {
+									x: input.mousePos.x,
+									y: input.mousePos.y
+							};
 
-				var cursor = {
-					x: input.mousePos.x,
-					y: input.mousePos.y
-				};
+							var prev_StrokeStyle = ctx.strokeStyle;
 
-				var prev_StrokeStyle = ctx.strokeStyle;
+							ctx.strokeStyle = 'red';
 
-				ctx.strokeStyle = 'red';
+							ctx.beginPath();
 
-				ctx.beginPath();
+							// top left
+							ctx.moveTo(player.pos.x, player.pos.y);
+							ctx.lineTo(cursor.x, cursor.y);
+							ctx.stroke();
 
-				// top left
-				ctx.moveTo(player.pos.x, player.pos.y);
-				ctx.lineTo(cursor.x, cursor.y);
-				ctx.stroke();
+							// top right
+							ctx.moveTo(player.pos.x + player.width, player.pos.y);
+							ctx.lineTo(cursor.x + player.width, cursor.y);
+							ctx.stroke();
 
-				// top right
-				ctx.moveTo(player.pos.x + player.width, player.pos.y);
-				ctx.lineTo(cursor.x + player.width, cursor.y);
-				ctx.stroke();
+							// bottom left
+							ctx.moveTo(player.pos.x, player.pos.y + player.height);
+							ctx.lineTo(cursor.x, cursor.y + player.height);
+							ctx.stroke();
 
-				// bottom left
-				ctx.moveTo(player.pos.x, player.pos.y + player.height);
-				ctx.lineTo(cursor.x, cursor.y + player.height);
-				ctx.stroke();
+							// bottom right
+							ctx.moveTo(player.pos.x + player.width, player.pos.y + player.height);
+							ctx.lineTo(cursor.x + player.width, cursor.y + player.height);
+							ctx.stroke();
 
-				// bottom right
-				ctx.moveTo(player.pos.x + player.width, player.pos.y + player.height);
-				ctx.lineTo(cursor.x + player.width, cursor.y + player.height);
-				ctx.stroke();
+							ctx.closePath();
 
-				ctx.closePath();
+							ctx.strokeStyle = prev_StrokeStyle;
+					}
+			}]);
 
-				ctx.strokeStyle = prev_StrokeStyle;
-			}
-		}]);
-
-		return View;
+			return View;
 	}();
 
 	exports.default = View;
 
-/***/ },
+/***/ }),
 /* 13 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -1258,96 +1300,161 @@
 			_classCallCheck(this, Player);
 
 			this.pos = new _vec2.default(0, 0);
-			this.nextPos = new _vec2.default(0, 0);
+			this.virtualPos = new _vec2.default(0, 0);
 			this.width = _config2.default.MAIN_SIZE;
 			this.height = _config2.default.MAIN_SIZE;
 			this.speed = new _vec2.default(0, 0);
 			this.world = world;
+			this.velocity = new _vec2.default(0, 0);
 
 			// TEMP:
 			this.drawCollisions = [];
 		}
 
+		// reset everything before new cycle
+
+
 		_createClass(Player, [{
 			key: 'preTick',
 			value: function preTick() {
-				this.drawCollisions = [];
 				var input = this.world.input;
 
-				this.nextPos = this.pos.copy();
-				// this.nextPos = this.world.input.mousePos;
+				this.drawCollisions = [];
 
-				var tempVel = 1;
+				// set virtual position as your current position
+				this.virtualPos = this.pos.copy();
 
+				// handle input keys
 				if (input.keys.LEFT) {
-					this.nextPos.x -= tempVel;
+					this.velocity.add(-4, 0);
 				}
-
 				if (input.keys.RIGHT) {
-					this.nextPos.x += tempVel;
+					this.velocity.add(4, 0);
 				}
-
 				if (input.keys.UP) {
-					this.nextPos.y -= tempVel;
+					this.velocity.add(0, -4);
 				}
-
 				if (input.keys.DOWN) {
-					this.nextPos.y += tempVel;
+					this.velocity.add(0, 4);
 				}
 
-				this.move();
+				// attach to the cursor
+				// let mousePos = this.world.input.mousePos;
+				// this.velocity.x += (mousePos.x - this.virtualPos.x) * .7;
+				// this.velocity.y += (mousePos.y - this.virtualPos.y) * .7;
 
-				// 	.add(config.GRAVITY.x, config.GRAVITY.y);
+				// TODO: add grativy velocity
+				// this.nextPos.add(config.GRAVITY.x, config.GRAVITY.y);
+
+				// add force to virtual position
+				this.virtualPos.x += this.velocity.x;
+				this.virtualPos.y += this.velocity.y;
+
+				// reduce velocity for next cycle
+				// TODO: move to postTick
+				this.velocity.x = Math.abs(this.velocity.x) < 4 ? 0 : this.velocity.x * 0.9;
+				this.velocity.y = Math.abs(this.velocity.y) < 4 ? 0 : this.velocity.y * 0.9;
 			}
 		}, {
 			key: 'tick',
 			value: function tick() {
-				this.pos = this.nextPos.copy();
+				this.preTick();
+
+				this.move();
+
+				this.pos = this.virtualPos.copy();
 			}
 		}, {
 			key: 'move',
 			value: function move() {
-				var _from = this.pos;
-				var _to = this.nextPos.copy();
-				var prevPos = _from.copy();
+				var startPos = this.pos;
+				var endPos = this.virtualPos.copy();
 
-				// корень из суммы квадратов координат
-				var len = Math.round(Math.sqrt(Math.pow(Math.abs(_to.x - _from.x), 2) + Math.pow(Math.abs(_to.y - _from.y), 2)));
+				// The length between the current position and the position in which we must set
+				var len = Math.sqrt(Math.pow(Math.abs(endPos.x - startPos.x), 2) + Math.pow(Math.abs(endPos.y - startPos.y), 2));
 
-				for (var i = 0; i < len; i += 0.5) {
-					var sinA = -(_from.x - _to.x) / Math.sqrt(Math.pow(_from.x - _to.x, 2) + Math.pow(_from.y - _to.y, 2));
+				var sinA = -(startPos.x - endPos.x) / Math.sqrt(Math.pow(startPos.x - endPos.x, 2) + Math.pow(startPos.y - endPos.y, 2));
 
-					var cosA = -(_from.y - _to.y) / Math.sqrt(Math.pow(_from.x - _to.x, 2) + Math.pow(_to.y - _from.y, 2));
+				var cosA = -(startPos.y - endPos.y) / Math.sqrt(Math.pow(startPos.x - endPos.x, 2) + Math.pow(endPos.y - startPos.y, 2));
 
-					var virtualPos = new _vec2.default(Math.floor(_from.x + sinA * i), Math.floor(_from.y + cosA * i));
+				// loop from 0 (start position) and length (end position)
+				var prevPos = startPos.copy();
+				for (var i = 0, collideX = false, collideY = false; i < len; i += 0.2) {
+					var virtualPos = {
+						x: Math.floor(startPos.x + sinA * i),
+						y: Math.floor(startPos.y + cosA * i)
 
-					if (prevPos.x === virtualPos.x && prevPos.y === virtualPos.y) {
-						continue;
-					}
+						// if same position
+						// if (prevPos.x === virtualPos.x && prevPos.y === virtualPos.y) {
+						// 	continue;
+						// }
 
-					// проверям сначало X
-					if (this.checkCollide({ x: virtualPos.x, y: prevPos.y })) {
+						// Hit a wall by X pos
+					};if (!collideX && this.checkCollide({ x: virtualPos.x, y: prevPos.y })) {
+						collideX = true;
+						// virtualPos.x = prevPos.x;
+
+						// this.virtualPos.x = prevPos.x;
+						// this.virtualPos.y = prevPos.y;
+						// log('collide')
+
+						// return;
+
 						// оставляем X, добавляем Y
-						this.pos = new _vec2.default(prevPos.x, prevPos.y);
-						this.nextPos = new _vec2.default(prevPos.x, this.nextPos.y);
+						// this.pos = new Vec(prevPos.x, prevPos.y);
+						// this.nextPos = new Vec(prevPos.x, this.nextPos.y);
 
-						return this.move();
+						// return this.move();
 					}
 
-					// потом Y
-					else if (this.checkCollide({ x: prevPos.x, y: virtualPos.y })) {
-							// оставляем Y, добавляем X
-							this.pos = new _vec2.default(prevPos.x, prevPos.y);
-							this.nextPos = new _vec2.default(this.nextPos.x, prevPos.y);
+					// then Y
+					if (!collideY && this.checkCollide({ x: prevPos.x, y: virtualPos.y })) {
+						collideY = true;
+						// virtualPos.y = prevPos.y;
 
-							return this.move();
-						}
+						// this.virtualPos.x = prevPos.x;
+						// this.virtualPos.y = prevPos.y;
 
-					// идем дальше
-					prevPos = virtualPos;
+						// оставляем Y, добавляем X
+						// this.pos = new Vec(prevPos.x, prevPos.y);
+						// this.nextPos = new Vec(this.nextPos.x, prevPos.y);
+
+						// return this.move();
+					}
+
+					if (collideX) {
+						this.velocity.x = 0;
+						virtualPos.x = prevPos.x;
+
+						break;
+					}
+
+					if (collideY) {
+						this.velocity.y = 0;
+						virtualPos.y = prevPos.y;
+
+						break;
+					}
+
+					// and both
+					// if ((collideY && collideX) || this.checkCollide({ x: virtualPos.x, y: virtualPos.y })) {
+					// 	collideX = true;
+					// 	collideY = true;
+					// 	return;
+					// }
+
+					// We didn't touch anything, set current virtual position
+					if (!collideX && !collideY) {
+						prevPos = virtualPos;
+					}
+
+					// if (collideX && collideY) {
+					// 	break;
+					// }
 				}
 
-				this.nextPos = _to;
+				this.virtualPos.x = prevPos.x;
+				this.virtualPos.y = prevPos.y;
 			}
 		}, {
 			key: 'checkCollide',
@@ -1448,6 +1555,6 @@
 
 	exports.default = Player;
 
-/***/ }
+/***/ })
 /******/ ]);
 //# sourceMappingURL=main.js.map

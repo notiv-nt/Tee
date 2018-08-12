@@ -1,7 +1,6 @@
 import config from 'config';
 import Vec from './lib/vec';
 
-
 export default class Player {
 	constructor(world) {
 		this.pos = new Vec(0, 0);
@@ -45,8 +44,8 @@ export default class Player {
 
 		// reduce velocity for next cycle
 		// TODO: move to postTick
-		this.velocity.x = Math.abs(this.velocity.x < 0.1) ? 0 : this.velocity.x * .9;
-		this.velocity.y = Math.abs(this.velocity.y < 0.1) ? 0 : this.velocity.y * .9;
+		this.velocity.x = Math.abs(this.velocity.x) < 4 ? 0 : this.velocity.x * 0.9;
+		this.velocity.y = Math.abs(this.velocity.y) < 4 ? 0 : this.velocity.y * 0.9;
 	}
 
 	tick() {
@@ -58,45 +57,50 @@ export default class Player {
 	}
 
 	move() {
-		let _from = this.pos;
-		let _to = this.virtualPos.copy();
+		let startPos = this.pos;
+		let endPos = this.virtualPos.copy();
 
 		// The length between the current position and the position in which we must set
-		let len = Math.round(
+		let len =
 			Math.sqrt(
-				Math.pow(Math.abs(_to.x - _from.x), 2) +
-				Math.pow(Math.abs(_to.y - _from.y), 2)
+				Math.pow(Math.abs(endPos.x - startPos.x), 2) +
+				Math.pow(Math.abs(endPos.y - startPos.y), 2)
 			)
-		);
+
+		let sinA = -(startPos.x - endPos.x) /
+			Math.sqrt(
+				Math.pow(startPos.x - endPos.x, 2) + Math.pow(startPos.y - endPos.y, 2)
+			);
+
+		let cosA = -(startPos.y - endPos.y) /
+			Math.sqrt(
+				Math.pow(startPos.x - endPos.x, 2) + Math.pow(endPos.y - startPos.y, 2)
+			);
 
 		// loop from 0 (start position) and length (end position)
-		let collideX = false, collideY = false;;
-		let prevPos = _from.copy();
-		for (let i = 0; i < len; i += 0.2) {
-			let sinA = -(_from.x - _to.x) /
-				Math.sqrt(
-					Math.pow(_from.x - _to.x, 2) + Math.pow(_from.y - _to.y, 2)
-				);
-
-			let cosA = -(_from.y - _to.y) /
-				Math.sqrt(
-					Math.pow(_from.x - _to.x, 2) + Math.pow(_to.y - _from.y, 2)
-				);
-
+		let prevPos = startPos.copy();
+		for (let i = 0, collideX = false, collideY = false; i < len; i += 0.2) {
 			let virtualPos = {
-				x: Math.floor(_from.x + sinA * i),
-				y: Math.floor(_from.y + cosA * i)
+				x: Math.floor(startPos.x + sinA * i),
+				y: Math.floor(startPos.y + cosA * i)
 			}
 
-			if (prevPos.x === virtualPos.x && prevPos.y === virtualPos.y) {
-				continue;
-			}
+			// if same position
+			// if (prevPos.x === virtualPos.x && prevPos.y === virtualPos.y) {
+			// 	continue;
+			// }
 
-			// check X first
+			// Hit a wall by X pos
 			if (!collideX && this.checkCollide({ x: virtualPos.x, y: prevPos.y })) {
-				// okay, we touch the solid block
-				virtualPos.x = prevPos.x;
 				collideX = true;
+				// virtualPos.x = prevPos.x;
+
+				// this.virtualPos.x = prevPos.x;
+				// this.virtualPos.y = prevPos.y;
+				// log('collide')
+
+				// return;
+
 				// оставляем X, добавляем Y
 				// this.pos = new Vec(prevPos.x, prevPos.y);
 				// this.nextPos = new Vec(prevPos.x, this.nextPos.y);
@@ -105,9 +109,13 @@ export default class Player {
 			}
 
 			// then Y
-			if (!collideY && this.checkCollide({ x: virtualPos.x, y: virtualPos.y })) {
+			if (!collideY && this.checkCollide({ x: prevPos.x, y: virtualPos.y })) {
 				collideY = true;
-				virtualPos.y = prevPos.y;
+				// virtualPos.y = prevPos.y;
+
+				// this.virtualPos.x = prevPos.x;
+				// this.virtualPos.y = prevPos.y;
+
 				// оставляем Y, добавляем X
 				// this.pos = new Vec(prevPos.x, prevPos.y);
 				// this.nextPos = new Vec(this.nextPos.x, prevPos.y);
@@ -115,12 +123,35 @@ export default class Player {
 				// return this.move();
 			}
 
-			// We didn't touch anything, set current virtual position
-			prevPos = virtualPos;
+			if (collideX) {
+				this.velocity.x = 0
+				virtualPos.x = prevPos.x
 
-			if (collideX && collideY) {
-				break;
+				break
 			}
+
+			if (collideY) {
+				this.velocity.y = 0
+				virtualPos.y = prevPos.y
+
+				break
+			}
+
+			// and both
+			// if ((collideY && collideX) || this.checkCollide({ x: virtualPos.x, y: virtualPos.y })) {
+			// 	collideX = true;
+			// 	collideY = true;
+			// 	return;
+			// }
+
+			// We didn't touch anything, set current virtual position
+			if (!collideX && !collideY) {
+				prevPos = virtualPos;
+			}
+
+			// if (collideX && collideY) {
+			// 	break;
+			// }
 		}
 
 		this.virtualPos.x = prevPos.x;
