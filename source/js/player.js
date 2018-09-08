@@ -44,8 +44,8 @@ export default class Player {
 
 		// reduce velocity for next cycle
 		// TODO: move to postTick
-		this.velocity.x = Math.abs(this.velocity.x) < 4 ? 0 : this.velocity.x * 0.9;
-		this.velocity.y = Math.abs(this.velocity.y) < 4 ? 0 : this.velocity.y * 0.9;
+		this.velocity.x = Math.abs(this.velocity.x) < 4 ? 0 : this.velocity.x * 0.8;
+		this.velocity.y = Math.abs(this.velocity.y) < 4 ? 0 : this.velocity.y * 0.8;
 	}
 
 	tick() {
@@ -79,11 +79,13 @@ export default class Player {
 
 		// loop from 0 (start position) and length (end position)
 		let prevPos = startPos.copy();
-		for (let i = 0, collideX = false, collideY = false; i < len; i += 0.2) {
+		for (let i = 0, collideX = false, collideY = false; i < len; i += 0.1) {
 			let virtualPos = {
 				x: Math.floor(startPos.x + sinA * i),
 				y: Math.floor(startPos.y + cosA * i)
 			}
+
+			log(virtualPos);
 
 			// if same position
 			// if (prevPos.x === virtualPos.x && prevPos.y === virtualPos.y) {
@@ -123,18 +125,38 @@ export default class Player {
 				// return this.move();
 			}
 
-			if (collideX) {
-				this.velocity.x = 0
-				virtualPos.x = prevPos.x
+			if (collideX && collideY) {
+				// if we can move by x
+				if (!this.checkCollide({ x: virtualPos.x, y: prevPos.y })) {
+					virtualPos.x = prevPos.x;
+				}
 
-				break
+				// if we can move by y
+				else if (!this.checkCollide({ x: prevPos.x, y: virtualPos.y })) {
+					virtualPos.y = prevPos.y;
+				}
+
+				else {
+					virtualPos.x = prevPos.x;
+					virtualPos.y = prevPos.y;
+					this.velocity.x = 0;
+					this.velocity.y = 0;
+					break;
+				}
 			}
 
-			if (collideY) {
-				this.velocity.y = 0
-				virtualPos.y = prevPos.y
+			else if (collideX) {
+				this.velocity.x = 0;
+				virtualPos.x = prevPos.x;
 
-				break
+				// break;
+			}
+
+			else if (collideY) {
+				this.velocity.y = 0;
+				virtualPos.y = prevPos.y;
+
+				// break;
 			}
 
 			// and both
@@ -145,9 +167,9 @@ export default class Player {
 			// }
 
 			// We didn't touch anything, set current virtual position
-			if (!collideX && !collideY) {
+			// if (!collideX && !collideY) {
 				prevPos = virtualPos;
-			}
+			// }
 
 			// if (collideX && collideY) {
 			// 	break;

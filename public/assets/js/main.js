@@ -81,16 +81,14 @@
 		// top bar
 		new _TileSolid2.default({ pos: new _vec2.default(2, 2) }), new _TileSolid2.default({ pos: new _vec2.default(3, 2) }), new _TileSolid2.default({ pos: new _vec2.default(4, 2) }), new _TileSolid2.default({ pos: new _vec2.default(5, 2) }), new _TileSolid2.default({ pos: new _vec2.default(6, 2) }), new _TileSolid2.default({ pos: new _vec2.default(7, 2) }), new _TileSolid2.default({ pos: new _vec2.default(8, 2) }), new _TileSolid2.default({ pos: new _vec2.default(9, 2) }), new _TileSolid2.default({ pos: new _vec2.default(10, 2) }), new _TileSolid2.default({ pos: new _vec2.default(11, 2) }), new _TileSolid2.default({ pos: new _vec2.default(12, 2) }), new _TileSolid2.default({ pos: new _vec2.default(13, 2) }), new _TileSolid2.default({ pos: new _vec2.default(14, 2) }), new _TileSolid2.default({ pos: new _vec2.default(15, 2) }), new _TileSolid2.default({ pos: new _vec2.default(16, 2) }), new _TileSolid2.default({ pos: new _vec2.default(17, 2) }), new _TileSolid2.default({ pos: new _vec2.default(18, 2) }), new _TileSolid2.default({ pos: new _vec2.default(19, 2) }), new _TileSolid2.default({ pos: new _vec2.default(20, 2) }), new _TileSolid2.default({ pos: new _vec2.default(21, 2) }), new _TileSolid2.default({ pos: new _vec2.default(22, 2) }), new _TileSolid2.default({ pos: new _vec2.default(23, 2) }), new _TileSolid2.default({ pos: new _vec2.default(24, 2) }), new _TileSolid2.default({ pos: new _vec2.default(25, 2) }),
 
+		// corner
+		new _TileSolid2.default({ pos: new _vec2.default(4, 4) }), new _TileSolid2.default({ pos: new _vec2.default(5, 4) }), new _TileSolid2.default({ pos: new _vec2.default(4, 5) }),
+
 		// left
 		new _TileSolid2.default({ pos: new _vec2.default(2, 3) }), new _TileSolid2.default({ pos: new _vec2.default(2, 4) }), new _TileSolid2.default({ pos: new _vec2.default(2, 5) }), new _TileSolid2.default({ pos: new _vec2.default(2, 6) }), new _TileSolid2.default({ pos: new _vec2.default(2, 7) }), new _TileSolid2.default({ pos: new _vec2.default(2, 8) }), new _TileSolid2.default({ pos: new _vec2.default(2, 9) }), new _TileSolid2.default({ pos: new _vec2.default(2, 10) }), new _TileSolid2.default({ pos: new _vec2.default(2, 11) }),
 
 		// bottom
-		new _TileSolid2.default({ pos: new _vec2.default(3, 11) }), new _TileSolid2.default({ pos: new _vec2.default(4, 11) }), new _TileSolid2.default({ pos: new _vec2.default(5, 11) }), new _TileSolid2.default({ pos: new _vec2.default(6, 11) }), new _TileSolid2.default({ pos: new _vec2.default(7, 11) }), new _TileSolid2.default({ pos: new _vec2.default(8, 11) }), new _TileSolid2.default({ pos: new _vec2.default(9, 11) }), new _TileSolid2.default({ pos: new _vec2.default(9, 12) }), new _TileSolid2.default({ pos: new _vec2.default(9, 13) }), new _TileSolid2.default({ pos: new _vec2.default(9, 14) }), new _TileSolid2.default({ pos: new _vec2.default(9, 15) }),
-		// new TileSolid({ pos: new Vec(10, 11) }),
-		// new TileSolid({ pos: new Vec(11, 11) }),
-		// new TileSolid({ pos: new Vec(12, 11) }),
-
-		new _TileSolid2.default({ pos: new _vec2.default(13, 12) }), new _TileSolid2.default({ pos: new _vec2.default(12, 16) }), new _TileSolid2.default({ pos: new _vec2.default(11, 16) }), new _TileSolid2.default({ pos: new _vec2.default(10, 16) }), new _TileSolid2.default({ pos: new _vec2.default(9, 16) }), new _TileSolid2.default({ pos: new _vec2.default(13, 16) }), new _TileSolid2.default({ pos: new _vec2.default(14, 16) }), new _TileSolid2.default({ pos: new _vec2.default(15, 16) }), new _TileSolid2.default({ pos: new _vec2.default(16, 16) }), new _TileSolid2.default({ pos: new _vec2.default(17, 16) }), new _TileSolid2.default({ pos: new _vec2.default(18, 16) }), new _TileSolid2.default({ pos: new _vec2.default(19, 16) }), new _TileSolid2.default({ pos: new _vec2.default(19, 15) }), new _TileSolid2.default({ pos: new _vec2.default(19, 14) }), new _TileSolid2.default({ pos: new _vec2.default(19, 13) }), new _TileSolid2.default({ pos: new _vec2.default(19, 12) }), new _TileSolid2.default({ pos: new _vec2.default(13, 11) }), new _TileSolid2.default({ pos: new _vec2.default(14, 11) }), new _TileSolid2.default({ pos: new _vec2.default(15, 11) }), new _TileSolid2.default({ pos: new _vec2.default(16, 11) }), new _TileSolid2.default({ pos: new _vec2.default(17, 11) }), new _TileSolid2.default({ pos: new _vec2.default(18, 11) }), new _TileSolid2.default({ pos: new _vec2.default(19, 11) }), new _TileSolid2.default({ pos: new _vec2.default(20, 11) }), new _TileSolid2.default({ pos: new _vec2.default(21, 11) }), new _TileSolid2.default({ pos: new _vec2.default(22, 11) }), new _TileSolid2.default({ pos: new _vec2.default(23, 11) }), new _TileSolid2.default({ pos: new _vec2.default(24, 11) }), new _TileSolid2.default({ pos: new _vec2.default(25, 11) }),
+		new _TileSolid2.default({ pos: new _vec2.default(3, 11) }), new _TileSolid2.default({ pos: new _vec2.default(4, 11) }), new _TileSolid2.default({ pos: new _vec2.default(5, 11) }), new _TileSolid2.default({ pos: new _vec2.default(6, 11) }), new _TileSolid2.default({ pos: new _vec2.default(7, 11) }), new _TileSolid2.default({ pos: new _vec2.default(8, 11) }), new _TileSolid2.default({ pos: new _vec2.default(9, 11) }), new _TileSolid2.default({ pos: new _vec2.default(9, 12) }), new _TileSolid2.default({ pos: new _vec2.default(9, 13) }), new _TileSolid2.default({ pos: new _vec2.default(9, 14) }), new _TileSolid2.default({ pos: new _vec2.default(9, 15) }), new _TileSolid2.default({ pos: new _vec2.default(13, 12) }), new _TileSolid2.default({ pos: new _vec2.default(12, 16) }), new _TileSolid2.default({ pos: new _vec2.default(11, 16) }), new _TileSolid2.default({ pos: new _vec2.default(10, 16) }), new _TileSolid2.default({ pos: new _vec2.default(9, 16) }), new _TileSolid2.default({ pos: new _vec2.default(13, 16) }), new _TileSolid2.default({ pos: new _vec2.default(14, 16) }), new _TileSolid2.default({ pos: new _vec2.default(15, 16) }), new _TileSolid2.default({ pos: new _vec2.default(16, 16) }), new _TileSolid2.default({ pos: new _vec2.default(17, 16) }), new _TileSolid2.default({ pos: new _vec2.default(18, 16) }), new _TileSolid2.default({ pos: new _vec2.default(19, 16) }), new _TileSolid2.default({ pos: new _vec2.default(19, 15) }), new _TileSolid2.default({ pos: new _vec2.default(19, 14) }), new _TileSolid2.default({ pos: new _vec2.default(19, 13) }), new _TileSolid2.default({ pos: new _vec2.default(19, 12) }), new _TileSolid2.default({ pos: new _vec2.default(13, 11) }), new _TileSolid2.default({ pos: new _vec2.default(14, 11) }), new _TileSolid2.default({ pos: new _vec2.default(15, 11) }), new _TileSolid2.default({ pos: new _vec2.default(16, 11) }), new _TileSolid2.default({ pos: new _vec2.default(17, 11) }), new _TileSolid2.default({ pos: new _vec2.default(18, 11) }), new _TileSolid2.default({ pos: new _vec2.default(19, 11) }), new _TileSolid2.default({ pos: new _vec2.default(20, 11) }), new _TileSolid2.default({ pos: new _vec2.default(21, 11) }), new _TileSolid2.default({ pos: new _vec2.default(22, 11) }), new _TileSolid2.default({ pos: new _vec2.default(23, 11) }), new _TileSolid2.default({ pos: new _vec2.default(24, 11) }), new _TileSolid2.default({ pos: new _vec2.default(25, 11) }),
 
 		// right
 		new _TileSolid2.default({ pos: new _vec2.default(25, 10) }), new _TileSolid2.default({ pos: new _vec2.default(25, 9) }), new _TileSolid2.default({ pos: new _vec2.default(25, 8) }), new _TileSolid2.default({ pos: new _vec2.default(25, 7) }), new _TileSolid2.default({ pos: new _vec2.default(25, 6) }), new _TileSolid2.default({ pos: new _vec2.default(25, 5) }), new _TileSolid2.default({ pos: new _vec2.default(25, 4) }), new _TileSolid2.default({ pos: new _vec2.default(25, 3) })]
@@ -107,16 +105,16 @@
 
 	new _view2.default('#game-canvas', world);
 
-	var i = 0;
-	document.addEventListener('click', function () {
-		if (i === 0) {
-			world.preTick();
-			i++;
-		} else if (i === 1) {
-			world.tick();
-			i = 0;
-		}
-	});
+	// let i = 0;
+	// document.addEventListener('click', function() {
+	// 	if (i === 0) {
+	// 		world.preTick();
+	// 		i++;
+	// 	} else if (i === 1) {
+	// 		world.tick();
+	// 		i = 0;
+	// 	}
+	// });
 
 	var debugElem = document.querySelector('#debug');
 	window.log = function (msg) {
@@ -1352,8 +1350,8 @@
 
 				// reduce velocity for next cycle
 				// TODO: move to postTick
-				this.velocity.x = Math.abs(this.velocity.x) < 4 ? 0 : this.velocity.x * 0.9;
-				this.velocity.y = Math.abs(this.velocity.y) < 4 ? 0 : this.velocity.y * 0.9;
+				this.velocity.x = Math.abs(this.velocity.x) < 4 ? 0 : this.velocity.x * 0.8;
+				this.velocity.y = Math.abs(this.velocity.y) < 4 ? 0 : this.velocity.y * 0.8;
 			}
 		}, {
 			key: 'tick',
@@ -1422,18 +1420,29 @@
 						// return this.move();
 					}
 
-					if (collideX) {
+					if (collideX && collideY) {
+						// if we can move by x
+						if (!this.checkCollide({ x: virtualPos.x, y: prevPos.y })) {
+							virtualPos.x = prevPos.x;
+						}
+
+						// if we can move by y
+						else if (!this.checkCollide({ x: prevPos.x, y: virtualPos.y })) {
+								virtualPos.y = prevPos.y;
+							} else {
+								// stuck
+								break;
+							}
+					} else if (collideX) {
 						this.velocity.x = 0;
 						virtualPos.x = prevPos.x;
 
-						break;
-					}
-
-					if (collideY) {
+						// break;
+					} else if (collideY) {
 						this.velocity.y = 0;
 						virtualPos.y = prevPos.y;
 
-						break;
+						// break;
 					}
 
 					// and both
@@ -1444,9 +1453,9 @@
 					// }
 
 					// We didn't touch anything, set current virtual position
-					if (!collideX && !collideY) {
-						prevPos = virtualPos;
-					}
+					// if (!collideX && !collideY) {
+					prevPos = virtualPos;
+					// }
 
 					// if (collideX && collideY) {
 					// 	break;
